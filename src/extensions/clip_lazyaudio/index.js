@@ -37,20 +37,11 @@ class lazyaudio {
                 }
             },
             {
-                opcode: 'stopLazyPlay',
-                text: formatMessage({
-                    id: 'stopLazyPlay',
-                    default: 'stop',
-                    description: 'stop music'
-                }),
-                blockType: BlockType.COMMAND,
-            },
-            {
                 opcode: 'lazyPlayFrom',
                 text: formatMessage({
                     id: 'lazyPlayFrom',
-                    default: 'play [URL] from [START] to [END]',
-                    description: 'http set header'
+                    default: 'play [URL] from [START]',
+                    description: 'lazyPlayFrom'
                 }),
                 blockType: BlockType.COMMAND,
                 arguments: {
@@ -63,17 +54,47 @@ class lazyaudio {
                         defaultValue: 0
                     }
                 }
+            },
+             {
+                opcode: 'stopLazyPlay',
+                text: formatMessage({
+                    id: 'stopLazyPlay',
+                    default: 'stop',
+                    description: 'stop music'
+                }),
+                blockType: BlockType.COMMAND,
+            },
+            {
+                opcode: 'setLazyPlayVolume',
+                text: formatMessage({
+                    id: 'setLazyPlayVolume',
+                    default: 'set volume to [VALUE]',
+                    description: 'set volume'
+                }),
+                blockType: BlockType.COMMAND,
+                arguments: {
+                    VALUE: {
+                        type: ArgumentType.NUMBER,
+                        defaultValue: 100
+                    }
+                }
             }]
         }
     }
     
     lazyPlay(args){
        audio = new Audio(args.URL);
+       console.log(audio);
        audio.play();
     }
     
     stopLazyPlay(args){
-       audio.stop();
+       audio.pause();
+       audio.currentTime = 0;
+    }
+    
+    setLazyPlayVolume(args){
+       audio.volume = args.VALUE;
     }
     
     lazyPlayFrom(args){
