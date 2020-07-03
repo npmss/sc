@@ -10,6 +10,7 @@ const BlockType = require('./block-type');
 
 const libra=require('../extensions/scp_libra');
 const httpio=require('../extensions/clip_httpio');
+const lazyaudio=require('../extensions/clip_lazyaudio');
 
 const builtinExtensions = {
     // This is an example that isn't loaded with the other core blocks,
@@ -29,6 +30,7 @@ const builtinExtensions = {
     gdxfor: () => require('../extensions/scratch3_gdx_for'),
     libra: () => require('../extensions/scp_libra'),
     httpio: () => require('../extensions/clip_httpio'),
+    lazyaudio: () => require('../extensions/clip_lazyaudio'),
 };
 
 /**
