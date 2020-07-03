@@ -15,7 +15,7 @@ class lazyaudio {
             id: "lazyaudio",
             name: formatMessage({
                 id: "lazyaudio",
-                default: "lazyaudio",
+                default: "Lazy Audio",
                 description: "Lazy Audio Extension"
             }),
             menuIconURI: menuIconURI,
