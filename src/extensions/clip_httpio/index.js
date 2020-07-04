@@ -21,7 +21,7 @@ class HTTPIO {
         return {
             id: "httpio",
             name: formatMessage({
-                id: "httpio",
+                id: "httpio.categoryName",
                 default: "HTTPIO",
                 description: "HTTPIO Extension"
             }),

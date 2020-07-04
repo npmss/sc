@@ -14,7 +14,7 @@ class lazyaudio {
         return {
             id: "lazyaudio",
             name: formatMessage({
-                id: "lazyaudio",
+                id: "lazyaudio.categoryName",
                 default: "Lazy Audio",
                 description: "Lazy Audio Extension"
             }),
