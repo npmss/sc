@@ -84,7 +84,6 @@ class lazyaudio {
     
     lazyPlay(args){
        audio = new Audio(args.URL);
-       console.log(audio);
        audio.play();
     }
     
@@ -94,7 +93,7 @@ class lazyaudio {
     }
     
     setLazyPlayVolume(args){
-       audio.volume = args.VALUE;
+       audio.volume = args.VALUE/100;
     }
     
     lazyPlayFrom(args){

@@ -31,7 +31,7 @@ class HTTPIO {
             {
                 opcode: 'setUA',
                 text: formatMessage({
-                    id: 'setUA',
+                    id: 'httpio.setUA',
                     default: 'set UA to [UA]',
                     description: 'http set useragent'
                 }),
@@ -46,7 +46,7 @@ class HTTPIO {
             {
                 opcode: 'setHeader',
                 text: formatMessage({
-                    id: 'setHeader',
+                    id: 'httpio.setHeader',
                     default: 'set header to [HEADER]',
                     description: 'http set header'
                 }),
@@ -61,7 +61,7 @@ class HTTPIO {
             {
                 opcode: 'httpGet',
                 text: formatMessage({
-                    id: 'httpGet',
+                    id: 'httpio.httpGet',
                     default: 'get [URL]',
                     description: 'http get'
                 }),
@@ -76,7 +76,7 @@ class HTTPIO {
             {
                 opcode: 'httpPost',
                 text: formatMessage({
-                    id: 'httpPost',
+                    id: 'httpio.httpPost',
                     default: 'post [URL] with prefix variable [PREFIX]',
                     description: 'http post'
                 }),
